@@ -6,3 +6,4 @@
 - TypeScript
 - SCSS
 - Webpack
+- i18n
