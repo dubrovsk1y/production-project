@@ -1,5 +1,5 @@
 import { AppLink } from "./AppLink/AppLink";
-import { Button, ThemeButton } from "./Button/Button";
-import { ThemeSwitch } from "./ThemeSwitch/ThemeSwitch";
+import { Button, ButtonTheme } from "./Button/Button";
+import { ThemeSwitcher } from "./ThemeSwitcher/ThemeSwitcher";
 
-export { AppLink, ThemeSwitch, Button, ThemeButton };
+export { ThemeSwitcher, Button, AppLink, ButtonTheme };

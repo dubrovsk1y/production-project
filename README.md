@@ -1,6 +1,8 @@
 # Production Project
 
-Данный проект создан с полного нуля
+Данный проект создан с полного нуля (npm init), используется FSD архитектура и следующие технологии:
 
-1. Инициализация проекта
-2. Настройка webpack для development и production сред
+- React
+- TypeScript
+- SCSS
+- Webpack
