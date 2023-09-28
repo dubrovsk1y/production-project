@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import { AppLink } from "./AppLink/AppLink";
 import { Button, ButtonTheme } from "./Button/Button";
 import { ThemeSwitcher } from "./ThemeSwitcher/ThemeSwitcher";
