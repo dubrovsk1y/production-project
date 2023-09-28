@@ -1,6 +1,6 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { useState } from "react";
-import { LangSwitcher, ThemeSwitcher } from "shared/ui";
+import { Button, ButtonVariant, LangSwitcher, ThemeSwitcher } from "shared/ui";
 import { useTranslation } from "react-i18next";
 import cls from "./Sidebar.module.scss";
 
@@ -22,9 +22,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
         className,
       ])}
     >
-      <button type="button" onClick={onToggle}>
+      <Button variant={ButtonVariant.OUTLINED} onClick={onToggle}>
         {t(collapsed ? "open" : "close", { ns: "actions" })}
-      </button>
+      </Button>
 
       <div className={cls.switchers}>
         <ThemeSwitcher />

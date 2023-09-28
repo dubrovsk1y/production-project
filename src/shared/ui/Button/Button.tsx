@@ -2,22 +2,24 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { ButtonHTMLAttributes, FC } from "react";
 import cls from "./Button.module.scss";
 
-export enum ButtonTheme {
-  CLEAR = "clear",
+export enum ButtonVariant {
+  TEXT = "text",
+  CONTAINED = "contained",
+  OUTLINED = "outlined",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  theme: ButtonTheme;
+  variant: ButtonVariant;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-  const { className, children, theme, ...otherProps } = props;
+  const { className, children, variant, ...otherProps } = props;
 
   return (
     <button
       type="button"
-      className={classNames(cls.Button, {}, [className, cls[theme]])}
+      className={classNames(cls.Button, {}, [className, cls[variant]])}
       {...otherProps}
     >
       {children}
