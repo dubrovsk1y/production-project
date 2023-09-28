@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ["plugin:react/recommended", "airbnb", "plugin:i18next/recommended"],
   parser: "@typescript-eslint/parser",
@@ -28,6 +29,7 @@ module.exports = {
     "react/jsx-props-no-spreading": [1],
     "react/jsx-filename-extension": [2, { extensions: [".tsx"] }],
     "i18next/no-literal-string": [2, { markupOnly: true }],
+    "max-len": [2, { ignoreComments: true }],
     quotes: [2, "double"],
   },
   globals: {

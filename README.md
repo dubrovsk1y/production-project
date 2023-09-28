@@ -7,3 +7,5 @@
 - SCSS
 - Webpack
 - i18n
+- Eslint
+- Stylelint

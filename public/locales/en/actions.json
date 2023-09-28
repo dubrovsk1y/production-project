@@ -3,5 +3,7 @@
   "create": "Create",
   "update": "Update",
   "save": "Save",
-  "translate": "Translate"
+  "translate": "Translate",
+  "open": "Open",
+  "close": "Close"
 }
