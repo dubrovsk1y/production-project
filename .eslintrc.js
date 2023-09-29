@@ -29,7 +29,7 @@ module.exports = {
     "react/jsx-props-no-spreading": [1],
     "react/jsx-filename-extension": [2, { extensions: [".tsx"] }],
     "i18next/no-literal-string": [2, { markupOnly: true }],
-    "max-len": [2, { ignoreComments: true }],
+    "max-len": [2, { ignoreComments: true, code: 100 }],
     quotes: [2, "double"],
   },
   globals: {
