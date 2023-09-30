@@ -28,11 +28,19 @@ module.exports = {
     "no-unused-vars": [1],
     "react/jsx-props-no-spreading": [1],
     "react/jsx-filename-extension": [2, { extensions: [".tsx"] }],
-    "i18next/no-literal-string": [2, { markupOnly: true }],
+    "i18next/no-literal-string": [2, { markupOnly: true, ignoreAttribute: ["data-testid", "to"] }],
     "max-len": [2, { ignoreComments: true, code: 100 }],
     quotes: [2, "double"],
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ["**/src/**/*.test.{ts,tsx}"],
+      rules: {
+        "i18next/no-literal-string": "off",
+      },
+    },
+  ],
 };
