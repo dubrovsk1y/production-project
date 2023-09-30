@@ -9,3 +9,6 @@
 - i18n
 - Eslint
 - Stylelint
+- Jest
+- Storybook
+- Loki
