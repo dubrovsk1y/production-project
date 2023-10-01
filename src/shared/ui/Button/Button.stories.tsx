@@ -38,3 +38,10 @@ export const Contained: Story = {
     variant: ButtonVariant.CONTAINED,
   },
 };
+
+export const Square: Story = {
+  args: {
+    square: true,
+    variant: ButtonVariant.OUTLINED,
+  },
+};

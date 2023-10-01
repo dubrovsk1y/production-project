@@ -17,3 +17,9 @@ yarn-debug.log*
 yarn-error.log*
 
 /.vscode
+
+# loki
+.loki/current
+.loki/difference
+.loki/report.html
+.loki/report.json

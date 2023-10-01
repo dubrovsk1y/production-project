@@ -1,12 +1,27 @@
 .Siderbar {
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
-  background-color: var(--inverted-bg-color);
+  background-color: var(--bg-color);
+  border-right: 1px solid var(--primary-color);
   position: relative;
   transition: width 0.3s;
 
-  &.collapsed {
-    width: var(--sidebar-width-collapsed);
+  .items {
+    margin-left: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .icon {
+        fill: var(--primary-color);
+      }      
+    }
   }
 
   .switchers {
@@ -15,9 +30,28 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    gap: 20px;
+  } 
 
-    .lang {
-      margin-left: 20px;
+  .btnCollapse {
+    position: absolute;
+    right: -60px;
+    bottom: 20px;
+  }
+
+  &.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .switchers {
+      flex-direction: column;
+    }
+
+    .items {
+      .item {
+        .link {
+          display: none;          
+        }
+      }
     }
   }
 }
