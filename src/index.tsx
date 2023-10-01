@@ -4,8 +4,8 @@ import { ThemeProvider } from "app/providers/ThemeProvider";
 import { ErrorBoundary } from "app/providers/ErrorBoundary";
 import { Suspense } from "react";
 import App from "app/App";
-// Initialization of translations
 import "shared/config/i18n/i18n";
+import "app/styles/index.scss";
 
 render(
   <Suspense fallback={<div>Loading...</div>}>

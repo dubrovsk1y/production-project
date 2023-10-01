@@ -15,13 +15,13 @@
     color: var(--bg-color);
     padding: 8px;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
   }
   
   &.outlined {
     padding: 8px;
     background: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     border: 1px solid var(--primary-color);
   }
 
