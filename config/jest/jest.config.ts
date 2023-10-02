@@ -6,6 +6,9 @@ import path from "path";
 import type { Config } from "jest";
 
 const config: Config = {
+  globals: {
+    __IS_DEV__: true,
+  },
   clearMocks: true,
   testEnvironment: "jsdom",
   coveragePathIgnorePatterns: [

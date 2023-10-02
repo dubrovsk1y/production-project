@@ -27,6 +27,7 @@ module.exports = {
     "object-curly-newline": [0],
     "jsx-a11y/no-static-element-interactions": [0],
     "jsx-a11y/click-events-have-key-events": [0],
+    "no-param-reassign": [0],
     "no-unused-vars": [1],
     "react/jsx-props-no-spreading": [1],
     "react-hooks/exhaustive-deps": [2],
