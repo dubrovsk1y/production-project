@@ -1,3 +1,5 @@
+/* eslint-disable i18next/no-literal-string */
+/* eslint-disable max-len */
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { Button, ButtonVariant, Modal } from "shared/ui";
@@ -31,7 +33,7 @@ export const Navbar = ({ className }: NavbarProps) => {
       </Button>
 
       <Modal isOpen={isAuthModalOpen} onClose={handleCloseAuthModal}>
-        <input type="text" />
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur ad iusto voluptas ratione cupiditate excepturi repellendus quas fugiat aliquam delectus magnam accusamus reiciendis molestiae soluta nemo optio, neque a ut.</p>
       </Modal>
     </div>
   );

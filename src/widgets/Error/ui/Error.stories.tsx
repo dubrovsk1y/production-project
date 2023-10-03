@@ -9,7 +9,6 @@ const meta = {
   parameters: {
     layout: "fullscreen",
   },
-  tags: ["autodocs"],
 } satisfies Meta<typeof Error>;
 
 export default meta;
