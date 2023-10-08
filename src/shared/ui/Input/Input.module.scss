@@ -1,0 +1,39 @@
+.Input {
+  margin-top: 12px;
+  position: relative;
+
+  .inputField {
+    font: inherit;
+    background: inherit;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    color: var(--primary-color);
+    width: 100%;
+    padding: 7px;
+    outline: none;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &:focus {
+      // TODO: Add border color
+    }
+  }
+
+  .inputLabel {    
+    color: var(--placeholder-color);
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+
+  .inputField:focus + .inputLabel,
+  .inputField:not(:placeholder-shown) + .inputLabel {
+    top: 0;    
+    color: var(--primary-color);
+    background: var(--bg-color);
+  }
+}

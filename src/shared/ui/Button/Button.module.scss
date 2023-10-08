@@ -1,4 +1,5 @@
 .Button {
+  font: inherit;
   cursor: pointer;
   color: var(--primary-color);
   outline: none;
@@ -13,13 +14,13 @@
   &.contained {
     background-color: var(--primary-color);
     color: var(--bg-color);
-    padding: 8px;
+    padding: 7px;
     border: none;
     border-radius: var(--border-radius);
   }
   
   &.outlined {
-    padding: 8px;
+    padding: 7px;
     background: none;
     border-radius: var(--border-radius);
     border: 1px solid var(--primary-color);
