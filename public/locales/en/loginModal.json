@@ -1,0 +1,13 @@
+{ 
+  "form": {
+    "title": "Authorization form",
+    "username": {
+      "label": "Username",
+      "placeholder": "Username"
+    },  
+    "password": {
+      "label": "Password",
+      "placeholder": "Password"
+    }
+  }
+}

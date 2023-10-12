@@ -7,5 +7,6 @@
   "open": "Open",
   "close": "Close",
   "reloadPage": "Reload page",
-  "login": "Log In"
+  "login": "Log In",
+  "logout": "Log Out"
 }

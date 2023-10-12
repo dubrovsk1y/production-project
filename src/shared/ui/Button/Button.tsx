@@ -21,13 +21,20 @@ export const Button = memo((props: ButtonProps) => {
     className,
     variant = ButtonVariant.OUTLINED,
     square = false,
+    disabled = false,
     ...otherProps
   } = props;
 
+  const mods: Record<string, boolean> = {
+    [cls.square]: square,
+    [cls.disabled]: disabled,
+  };
+
   return (
     <button
+      className={classNames(cls.Button, mods, [className, cls[variant]])}
       type="button"
-      className={classNames(cls.Button, { [cls.square]: square }, [className, cls[variant]])}
+      disabled={disabled}
       {...otherProps}
     >
       {children}

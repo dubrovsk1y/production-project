@@ -1,3 +1,4 @@
 {
-  "somethingWentWrong": "Something went wrong"
+  "somethingWentWrong": "Something went wrong",
+  "incorrectLoginOrPassword": "Incorrect login or password"
 }

@@ -6,7 +6,7 @@
     { "id": 4, "title": "json-server 4", "author": "typicode" }
   ],
   "users": [
-    { "id": 1, "username": "username1", "password": "password1" },
+    { "id": 1, "username": "admin", "password": "123" },
     { "id": 2, "username": "username2", "password": "password2" },
     { "id": 3, "username": "username3", "password": "password3" },
     { "id": 4, "username": "username4", "password": "password4" },
