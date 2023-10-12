@@ -26,6 +26,14 @@ export const Outlined: Story = {
   },
 };
 
+export const OutlinedDisabled: Story = {
+  args: {
+    children: "Outlined",
+    variant: ButtonVariant.OUTLINED,
+    disabled: true,
+  },
+};
+
 export const Contained: Story = {
   args: {
     children: "Contained",

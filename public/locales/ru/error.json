@@ -1,3 +1,4 @@
 {
-  "somethingWentWrong": "Произошла непредвиденная ошибка"
+  "somethingWentWrong": "Произошла непредвиденная ошибка",
+  "incorrectLoginOrPassword": "Неверный логин или пароль"
 }

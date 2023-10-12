@@ -14,6 +14,7 @@ const ns = [
   "sidebar",
   "notFoundPage",
   "translation",
+  "loginModal",
 ];
 const supportedLngs = ["en", "ru"];
 const resources = ns.reduce((acc, n) => {

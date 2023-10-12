@@ -1,0 +1,13 @@
+{
+  "form": {
+    "title": "Форма авторизации",
+    "username": {
+      "label": "Имя пользователя",
+      "placeholder": "Имя пользователя"
+    },  
+    "password": {
+      "label": "Пароль",
+      "placeholder": "Пароль"
+    }
+  }
+}
