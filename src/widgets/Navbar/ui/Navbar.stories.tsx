@@ -24,4 +24,4 @@ export const Dark: Story = {
 };
 
 Light.decorators = [StoreDecorator({ user: { authData: undefined } })];
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({ user: { authData: { id: 1, username: "jr.dubrovskiy@gmail.com" } } })];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({ user: { authData: { id: "1", username: "jr.dubrovskiy@gmail.com" } } })];

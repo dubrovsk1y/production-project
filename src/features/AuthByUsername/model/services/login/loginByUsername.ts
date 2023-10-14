@@ -23,7 +23,6 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameArg, { reje
 
       return response.data;
     } catch (e) {
-      console.log(e);
       return thunkAPI.rejectWithValue("incorrectLoginOrPassword");
     }
   },
