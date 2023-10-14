@@ -7,14 +7,16 @@ import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 const ns = [
-  "aboutPage",
   "actions",
   "error",
-  "mainPage",
   "sidebar",
-  "notFoundPage",
   "translation",
   "loginModal",
+  // pages
+  "aboutPage",
+  "mainPage",
+  "notFoundPage",
+  "profilePage",
 ];
 const supportedLngs = ["en", "ru"];
 const resources = ns.reduce((acc, n) => {

@@ -12,16 +12,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-    .item {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      .icon {
-        fill: var(--primary-color);
-      }      
-    }
   }
 
   .switchers {
@@ -44,14 +34,6 @@
 
     .switchers {
       flex-direction: column;
-    }
-
-    .items {
-      .item {
-        .link {
-          display: none;          
-        }
-      }
     }
   }
 }

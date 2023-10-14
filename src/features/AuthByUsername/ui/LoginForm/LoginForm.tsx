@@ -1,12 +1,13 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Button, Input, Text, TextTheme } from "shared/ui";
 import {
   DynamicModuleLoader,
   ReducersList,
 } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch";
 import { getLoginError } from "../../model/selectors/getLoginError/getLoginError";
 import { getLoginPassword } from "../../model/selectors/getLoginPassword/getLoginPassword";
 import { getLoginIsLoading } from "../../model/selectors/getLoginIsLoading/getLoginIsLoading";
@@ -17,6 +18,7 @@ import cls from "./LoginForm.module.scss";
 
 interface LoginFormProps {
   className?: string;
+  handleSuccess: () => void
 }
 
 const initialReducers: ReducersList = {
@@ -24,9 +26,9 @@ const initialReducers: ReducersList = {
 };
 
 const LoginForm = memo((props: LoginFormProps) => {
-  const { className } = props;
+  const { className, handleSuccess } = props;
   const { t } = useTranslation(["actions", "loginModal", "error"]);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const username = useSelector(getLoginUsername);
   const password = useSelector(getLoginPassword);
@@ -41,10 +43,13 @@ const LoginForm = memo((props: LoginFormProps) => {
     dispatch(loginActions.setPassword(value));
   }, [dispatch]);
 
-  const handleSubmit = useCallback(() => {
-    // @ts-ignore
-    dispatch(loginByUsername({ username, password }));
-  }, [dispatch, password, username]);
+  const handleSubmit = useCallback(async () => {
+    const result = await dispatch(loginByUsername({ username, password }));
+
+    if (result.meta.requestStatus === "fulfilled") {
+      handleSuccess();
+    }
+  }, [dispatch, handleSuccess, password, username]);
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
