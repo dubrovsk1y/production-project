@@ -10,15 +10,15 @@ import "app/styles/index.scss";
 
 render(
   <Suspense fallback={<div>Loading...</div>}>
-    <StoreProvider>
-      <ErrorBoundary>
-        <BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <StoreProvider>
           <ThemeProvider>
             <App />
           </ThemeProvider>
-        </BrowserRouter>
-      </ErrorBoundary>
-    </StoreProvider>
+        </StoreProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
   </Suspense>,
   document.getElementById("root"),
 );

@@ -1,5 +1,5 @@
 import { Loader, Modal } from "shared/ui";
-import { Suspense } from "react";
+import { Suspense, memo } from "react";
 import { LoginFormAsync } from "../LoginForm/LoginForm.async";
 
 interface LoginModalProps {
@@ -8,7 +8,7 @@ interface LoginModalProps {
   onClose: () => void;
 }
 
-export const LoginModal = (props: LoginModalProps) => {
+export const LoginModal = memo((props: LoginModalProps) => {
   const { className, isOpen, onClose } = props;
 
   return (
@@ -18,8 +18,8 @@ export const LoginModal = (props: LoginModalProps) => {
       onClose={onClose}
     >
       <Suspense fallback={<Loader />}>
-        <LoginFormAsync />
+        <LoginFormAsync handleSuccess={onClose} />
       </Suspense>
     </Modal>
   );
-};
+});
